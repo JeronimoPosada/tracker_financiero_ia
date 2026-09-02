@@ -6,3 +6,4 @@ sqlalchemy
 aiogram
 google-genai
 matplotlib
+gspread
