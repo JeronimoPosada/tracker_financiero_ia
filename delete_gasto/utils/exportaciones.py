@@ -1,8 +1,9 @@
 import os
 import tempfile
-from fpdf import FPDF
+import fpdf
 from aiogram import types, Router
 from aiogram.filters import Command
+import fpdf
 from delete_gasto.services.database_models import Gasto as GastoORM, Ingreso as IngresoORM
 
 from delete_gasto.services.database import SessionLocal
@@ -35,7 +36,7 @@ async def cmd_exportar(message: types.Message):
         ingresos = db.query(IngresoORM).all()
 
         # Crear PDF
-        pdf = FPDF()
+        pdf = fpdf.FPDF()
         pdf.add_page()
         pdf.set_font("Arial", size=12)
         pdf.cell(200, 10, "Reporte Financiero Personal", ln=True, align='C')
