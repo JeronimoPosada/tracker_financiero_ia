@@ -2,3 +2,4 @@
 requirements.txt
 .env
 /tests
+credentials.json
