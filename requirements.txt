@@ -1,0 +1,8 @@
+pydantic
+datetime
+psycopg
+python-dotenv
+sqlalchemy
+aiogram
+google-genai
+matplotlib
